@@ -9,12 +9,33 @@ CONFIG_PACKAGE_luci-app-openclash=y
 CONFIG_PACKAGE_luci-app-istorex=y
 CONFIG_PACKAGE_luci-app-istore=y
 CONFIG_PACKAGE_luci-app-quickstart=y
-# === Docker ===
-CONFIG_PACKAGE_luci-app-dockerman=y
-CONFIG_PACKAGE_dockerd=y
+# === Docker 全家桶 (砍掉省~60MB，NAND放不下) ===
+CONFIG_PACKAGE_luci-app-dockerman=n
+CONFIG_PACKAGE_luci-i18n-dockerman-zh-cn=n
+CONFIG_PACKAGE_dockerd=n
+CONFIG_PACKAGE_docker=n
+CONFIG_PACKAGE_containerd=n
+CONFIG_PACKAGE_docker-compose=n
+# === 非核心大包 (砍掉省~19MB) ===
+CONFIG_PACKAGE_luci-app-gecoosac=n
+CONFIG_PACKAGE_luci-i18n-gecoosac-zh-cn=n
+CONFIG_PACKAGE_gecoosac=n
+CONFIG_PACKAGE_libimobiledevice=n
+CONFIG_PACKAGE_libimobiledevice-glue=n
+CONFIG_PACKAGE_libusbmuxd=n
+CONFIG_PACKAGE_luci-app-upnp=n
+CONFIG_PACKAGE_luci-i18n-upnp-zh-cn=n
+CONFIG_PACKAGE_miniupnpd-nftables=n
+CONFIG_PACKAGE_luci-app-wolplus=n
+CONFIG_PACKAGE_luci-i18n-wolplus-zh-cn=n
+CONFIG_PACKAGE_wolplus=n
+CONFIG_PACKAGE_coremark=n
+CONFIG_PACKAGE_luci-app-coremark=n
 # === 禁用其他代理软件 ===
 CONFIG_PACKAGE_luci-app-homeproxy=n
 CONFIG_PACKAGE_luci-app-passwall=n
 CONFIG_PACKAGE_luci-app-passwall2=n
 CONFIG_PACKAGE_luci-app-momo=n
 CONFIG_PACKAGE_luci-app-nikki=n
+CONFIG_PACKAGE_luci-app-tailscale=n
+CONFIG_PACKAGE_tailscale=n
